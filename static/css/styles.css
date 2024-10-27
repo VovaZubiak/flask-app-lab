@@ -1,0 +1,92 @@
+/* Основні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #343a40;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Мінімальна висота для повного екрану */
+}
+
+/* Контейнер для основного контенту */
+.main-content {
+    flex: 1; /* Займає весь доступний простір між навігацією та футером */
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #343a40;
+    color: #fff;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Навігаційна панель */
+.navbar {
+    background-color: #58a9ff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    margin-right: 15px;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out; /* Анімація для плавних змін */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #3790f0;
+    color: #fff;
+    border-radius: 5px;
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+}
+
+/* Стилі секцій */
+h2 {
+    color: #007bff;
+    border-bottom: 3px solid #4a9cf3;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+section {
+    margin: 40px 0;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Анімація для заголовків */
+h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #5aa2f0;
+    transition: all 0.3s ease-in-out;
+}
+
+h2:hover::before {
+    left: 0;
+}
+
+
+

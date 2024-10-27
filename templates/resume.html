@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Резюме{% endblock %}
+
+{% block content %}
+    {% if section == "about" %}
+    <section id="about" class="mp">
+        <h2>Про себе</h2>
+        <p>
+            Мене звати Володимир. Я навчаюсь у Прикарпатському національному університеті на спеціальності "Інженерія програмного забезпечення". Окрім навчання, я захоплююся викладанням жахливих пулл-реквестів.</p>
+    </section>
+    {% elif section == "education" %}
+    <section id="education" class="mp">
+        <h2>Освіта</h2>
+        <p>- Середня повна освіта (Ліцей № 12 імені Івана Франка)</p>
+        <p>- Неповна вища освіта бакалавр (Прикарпатский национальный университет имени Василия Стефаника)</p>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="logo" style="max-width: 200px;">
+        </div>
+    </section>
+    {% elif section == "skills" %}
+    <section id="skills" class="mp">
+        <h2>Навички</h2>
+        <p>Базові знання в мовах</p>
+        <ol>
+            <li>Java</li>
+            <li>Ruby</li>
+            <li>Python3</li>
+            <li>JavaScipt</li>
+            <li>C++</li>
+            <li>C#</li>
+          </ol>
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='images/languageslist.jpg') }}" alt="Мови програмування" class="logo" style="max-width: 800px;">
+        </div>
+    </section>
+    {% elif section == "experience" %}
+    <section id="experience" class="mp">
+        <h2>Досвід роботи</h2>
+        <p>Відсутній.</p>
+    </section>
+    {% endif %}
+    
+{% endblock %}
